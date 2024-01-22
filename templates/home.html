@@ -1,0 +1,12 @@
+<h4>Application Form</h4>
+<form action="/apply" method="post">
+    <label>Enter movie name</label><br>
+    <input type="text" name="movie" list="recoom" placeholder="Avatar">
+    <datalist id="recoom">
+        {% for i in movies['title'] %}
+            <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </datalist>
+
+    <input type="submit">
+</form>
