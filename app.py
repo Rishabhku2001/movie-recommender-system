@@ -5,10 +5,10 @@ import pandas as pd
 app = Flask(__name__)
 
 
-movies_dict = pickle.load(open('movie-recommender-system/movies_dict.pkl', 'rb'))
+movies_dict = pickle.load(open('movies_dict.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
 
-similarity = pickle.load(open('movie-recommender-system/similarity.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 @app.route("/")
 def hello_world():
